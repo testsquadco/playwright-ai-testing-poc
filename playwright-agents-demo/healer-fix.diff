@@ -1,0 +1,20 @@
+# Healer Analysis: The test fails because the selector was changed to a non-existent text 'Register'.
+# On the sign-in page, there is no element with text 'Register'. The correct action is to click the
+# 'Sign up' link inside the authentication form. The patch below scopes the selector to the form
+# to avoid strict mode violations and restores the intended navigation.
+
+*** Begin Patch
+*** Update File: tests/navigation.spec.ts
+@@
+   test('cross-links between sign-in and sign-up', async ({ page }) => {
+     await page.goto('/sign-in');
+-    // Intentionally break: incorrect text selector that should not exist
+-    await page.getByText('Register').click();
++    // Click the scoped 'Sign up' link inside the auth form to avoid duplicates
++    await page.locator('form').getByRole('link', { name: 'Sign up' }).click();
+     await expect(page).toHaveURL(/\/sign-up$/);
+ 
+     await page.locator('form').getByRole('link', { name: 'Log in' }).click();
+     await expect(page).toHaveURL(/\/sign-in$/);
+   });
+*** End Patch

@@ -1,0 +1,70 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Demo SaaS" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e9]: Demo SaaS
+        - generic [ref=e12]:
+          - link "Log in" [ref=e13] [cursor=pointer]:
+            - /url: /sign-in
+            - button "Log in" [ref=e14]:
+              - generic [ref=e16]: Log in
+          - link "Sign up" [ref=e17] [cursor=pointer]:
+            - /url: /sign-up
+            - button "Sign up" [ref=e18]:
+              - generic [ref=e20]: Sign up
+      - navigation [ref=e21]:
+        - generic [ref=e23]:
+          - link "Log in" [ref=e24] [cursor=pointer]:
+            - /url: /sign-in
+            - button "Log in" [ref=e25]:
+              - generic [ref=e27]: Log in
+          - link "Sign up" [ref=e28] [cursor=pointer]:
+            - /url: /sign-up
+            - button "Sign up" [ref=e29]:
+              - generic [ref=e31]: Sign up
+      - main [ref=e32]:
+        - generic [ref=e33]:
+          - region "Notifications alt+T"
+          - generic [ref=e35]:
+            - paragraph [ref=e36]: Log in
+            - paragraph [ref=e37]: to continue to Demo Sass
+            - generic [ref=e38]:
+              - group [ref=e39]:
+                - generic [ref=e40]:
+                  - generic [ref=e41]:
+                    - generic [ref=e42]: Email *
+                    - textbox "Email" [ref=e44]
+                  - generic [ref=e45]:
+                    - generic [ref=e46]: Password *
+                    - generic [ref=e47]:
+                      - textbox "Password" [ref=e49]
+                      - button [ref=e51] [cursor=pointer]:
+                        - img [ref=e53]
+                  - button "Log in" [ref=e55] [cursor=pointer]:
+                    - generic [ref=e57]: Log in
+                  - link "Forgot password?" [ref=e58] [cursor=pointer]:
+                    - /url: /reset-password
+              - separator [ref=e59]:
+                - generic [ref=e60]: or
+              - generic [ref=e61]:
+                - button "Continue with Google" [ref=e62] [cursor=pointer]:
+                  - generic [ref=e63]:
+                    - img [ref=e65]
+                    - paragraph [ref=e71]: Continue with Google
+                - link "Continue with Email" [ref=e72] [cursor=pointer]:
+                  - /url: /email-otp
+                  - button "Continue with Email" [ref=e73]:
+                    - generic [ref=e74]:
+                      - img [ref=e76]
+                      - paragraph [ref=e80]: Continue with Email
+              - paragraph [ref=e81]:
+                - text: Don't have an account?
+                - link "Sign up" [ref=e82] [cursor=pointer]:
+                  - /url: /sign-up
+  - alert [ref=e83]
+```
